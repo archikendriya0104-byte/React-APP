@@ -5,7 +5,7 @@ COPY package.json .
 RUN npm ci
 COPY . .
 RUN npm run build
-
+RUN apt update
 
 FROM nginx:alpine
 
